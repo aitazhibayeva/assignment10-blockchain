@@ -20,7 +20,7 @@ The game allows a user to:
 The backend is written in Solidity and deployed using **Remix IDE**.
 
 ### ▶Steps (from Practice #10 document)
-![Screenshot](1.png)
+![Screenshot](images/1.png)
 
 1. Open **Remix IDE**
 2. Create a new file: `RPS.sol`
@@ -33,7 +33,7 @@ The backend is written in Solidity and deployed using **Remix IDE**.
    MetaMask will request confirmation.
 
 ### Important Deployment Info
-![Screenshot](2.png)
+![Screenshot](images/2.png)
 
 - **Contract Address:**  
   `0x4b547ecA0c2F3376E7f5e38626dCee47f03a2413`
@@ -61,6 +61,9 @@ The frontend uses **Ethers.js** to call smart contract functions.
 ✔ What changed
 
 
+![Screenshot](images/3.png)
+![Screenshot](images/4.png)
+![Screenshot](images/5.png)
 
 
 Old game logic used Math.random()
