@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ethers.js для работы с ABI и контрактом -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors (On-chain)</h1>
+    </header>
+
+    <!-- Блок подключения кошелька и инфо о контракте -->
+    <section class="wallet-section">
+        <button id="connect-btn">Connect Wallet</button>
+        <p id="wallet-address">Wallet: not connected</p>
+        <p id="min-bet">Min bet: -</p>
+        <p id="house-edge">House edge: -</p>
+    </section>
+
+    <!-- Ввод ставки -->
+    <section class="bet-section">
+        <label for="bet-amount">Bet amount (ETH):</label>
+        <input type="number" id="bet-amount" min="0" step="0.001" value="0.01">
+    </section>
+
+    <!-- Табло счета -->
+    <div class="score-board">
+        <!-- подписи -->
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">house</div>
+
+        <!-- счет -->
+        <span id="user-score">0</span> : 
+        <span id="computer-score">0</span>
+    </div>
+
+    <!-- Результат последней игры -->
+    <div class="result">
+        <p id="result-text">Make your move.</p>
+    </div>
+
+    <!-- Выбор хода -->
+    <div class="choices">
+        <div class="choice" id="r">
+            ✊
+        </div>
+
+        <div class="choice" id="p">
+            ✋
+        </div>
+
+        <div class="choice" id="s">
+            ✌️
+        </div>
+    </div>
+
+    <!-- Сообщение про действие -->
+    <p id="action-msg">Choose Rock, Paper or Scissors and send a transaction.</p>
+
+    <!-- Кнопка вывода выигрыша -->
+    <section class="withdraw-section">
+        <button id="withdraw-btn">Withdraw winnings</button>
+        <p id="pending-wins">Pending winnings: -</p>
+    </section>
+    <script src="app.js" charset="utf-8"></script>
+
+</body>
+</html>
